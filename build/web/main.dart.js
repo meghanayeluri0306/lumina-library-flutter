@@ -81783,12 +81783,12 @@ break}m.af(t.Pu).f.oy(B.PY)
 case 4:case 1:return A.M(q,r)}})
 return A.N($async$rB,r)},
 a2v(){var s=this,r=null
-return new A.I8(B.eh,A.avz(A.d([B.ED,A.rs(B.Gc,new A.afk(s),r,B.VI),A.rs(B.Gh,new A.afl(s),r,B.Vv),A.rs(B.Ga,new A.afm(s),r,B.Vq),A.rs(B.Gg,new A.afn(s),r,B.VT),A.rs(B.Gd,new A.afo(s),r,B.VO),B.PI,new A.cu(B.Ff,new A.Kc(new A.afp(s),r,r,r,A.aGF(r,r,B.k,r,r,r,r,r,r,B.kt,r,r,r,r,r,B.Ar,r,r,r,r),r,r,!1,r,!0,r,B.VD,r),r)],t.D),B.b5),r)},
+return new A.I8(B.eh,A.avz(A.d([B.ED,A.rs(B.Gc,new A.afk(s),r,B.VI),A.rs(B.Gh,new A.afl(s),r,B.Vv),A.rs(B.Ga,new A.afm(s),r,B.Vq),A.rs(B.Gg,new A.afn(s),r,B.VU),A.rs(B.Gd,new A.afo(s),r,B.VO),B.PI,new A.cu(B.Ff,new A.Kc(new A.afp(s),r,r,r,A.aGF(r,r,B.k,r,r,r,r,r,r,B.kt,r,r,r,r,r,B.Ar,r,r,r,r),r,r,!1,r,!0,r,B.VD,r),r)],t.D),B.b5),r)},
 L(a){var s,r,q,p,o=this,n=null,m=A.eR(20),l=t.D
 m=A.vQ(A.d([A.iC(n,A.zU(A.d([B.Gb,B.yL,A.fu("Reader: meghana",n,n,n,B.Rv,n,n)],l),B.au,B.aO,B.aX,0),B.z,n,n,new A.di(B.DS,n,n,m,n,n,B.aW),n,n,B.F7,B.n2,n,n,n)],l),B.F,0,B.G1,n)
 s=o.a2v()
 if(o.y)l=B.BS
-else{r=A.iC(n,B.VY,B.z,n,n,new A.di(B.eh,n,B.As,A.eR(8),n,n,B.aW),n,n,n,B.Fc,n,n,n)
+else{r=A.iC(n,B.VZ,B.z,n,n,new A.di(B.eh,n,B.As,A.eR(8),n,n,B.aW),n,n,n,B.Fc,n,n,n)
 q=A.MN(o.x,A.xY(n,new A.eB(4,A.eR(30),B.o),n,n,n,n,n,n,!0,n,n,n,n,n,n,B.k,!0,n,n,n,n,n,n,n,n,n,n,n,n,n,n,"Search titles, subjects...",n,n,n,n,n,n,n,n,n,!0,!0,!1,n,B.G3,n,n,n,n,n,n,n,n,n,n,n,n),!1,o.gajQ())
 p=o.w.length
 l=new A.cu(B.n1,A.lc(A.d([B.Vn,B.c0,r,B.c0,q,B.c0,A.aqq(new A.yl(new A.ac0(new A.aft(o),p,!0,!0,!0,n),n,B.ac,!1,n,n,B.lT,!1,n,n,p,B.an,n,n,B.M,B.av,n),1)],l),B.bi,B.aO,B.aX),n)}return A.td(m,B.iV,l,s)}}
@@ -81929,8 +81929,8 @@ if(o){k=A.eR(12)
 j=f.at
 i=B.i.el(j,60)
 h=B.i.bu(j,60)
-B.b.S(m,A.d([A.iC(g,A.lc(A.d([A.zU(A.d([B.Gf,B.yL,A.fu(B.c.q7(B.i.k(i),2,"0")+":"+B.c.q7(B.i.k(h),2,"0")+" left",g,g,g,B.zj,g,g)],l),B.au,B.dt,B.aX,0),B.f6,B.VF,B.lb,A.eF(A.aqn(B.Gk,B.VX,new A.afq(f,s),A.If(g,g,B.D_,g,g,g,g,g,g,g,g,g,B.jo,g,g,g,g,g,g,g)),g,1/0),A.acS(B.VJ,new A.afr(f,c),g)],l),B.au,B.aO,B.aX),B.z,g,g,new A.di(B.Ce,g,g,k,g,g,B.aW),g,g,g,B.F9,g,g,g)],l))}else if(n)B.b.S(m,A.d([A.eF(A.aqn(B.G6,B.W2,g,A.If(g,g,B.j1,g,g,g,g,g,g,g,g,g,B.jo,g,g,g,g,g,g,g)),g,1/0)],l))
-else B.b.S(m,A.d([A.eF(A.aqn(B.Gi,B.VR,new A.afs(f,c),A.If(g,g,B.b4,g,g,g,g,g,g,g,g,g,B.jo,g,g,g,g,g,g,g)),g,1/0)],l))
+B.b.S(m,A.d([A.iC(g,A.lc(A.d([A.zU(A.d([B.Gf,B.yL,A.fu(B.c.q7(B.i.k(i),2,"0")+":"+B.c.q7(B.i.k(h),2,"0")+" left",g,g,g,B.zj,g,g)],l),B.au,B.dt,B.aX,0),B.f6,B.VF,B.lb,A.eF(A.aqn(B.Gk,B.VY,new A.afq(f,s),A.If(g,g,B.D_,g,g,g,g,g,g,g,g,g,B.jo,g,g,g,g,g,g,g)),g,1/0),A.acS(B.VJ,new A.afr(f,c),g)],l),B.au,B.aO,B.aX),B.z,g,g,new A.di(B.Ce,g,g,k,g,g,B.aW),g,g,g,B.F9,g,g,g)],l))}else if(n)B.b.S(m,A.d([A.eF(A.aqn(B.G6,B.W3,g,A.If(g,g,B.j1,g,g,g,g,g,g,g,g,g,B.jo,g,g,g,g,g,g,g)),g,1/0)],l))
+else B.b.S(m,A.d([A.eF(A.aqn(B.Gi,B.VS,new A.afs(f,c),A.If(g,g,B.b4,g,g,g,g,g,g,g,g,g,B.jo,g,g,g,g,g,g,g)),g,1/0)],l))
 return new A.qu(B.k,2,new A.cn(d,B.o),B.F5,new A.cu(B.jp,A.lc(m,B.bi,B.aO,B.aX),g),g)},
 $S:505}
 A.afq.prototype={
@@ -81947,13 +81947,13 @@ L(a){var s=null
 return A.td(A.vQ(s,B.b4,s,B.dr,B.Vh),s,A.hN(A.lc(A.d([B.G5,B.lc,B.Vt,B.yN,B.Vz,B.ld,A.iC(s,B.E1,B.z,s,s,new A.di(B.eh,s,s,A.eR(16),s,s,B.aW),s,s,s,B.jp,s,s,s)],t.D),B.au,B.dt,B.aX),s,s),s)}}
 A.rh.prototype={
 L(a){var s=null
-return A.td(A.vQ(s,B.dv,s,B.dr,B.VQ),s,A.avz(B.HX,B.fV),s)}}
+return A.td(A.vQ(s,B.dv,s,B.dr,B.VR),s,A.avz(B.HX,B.fV),s)}}
 A.rg.prototype={
 L(a){var s=null
 return A.td(A.vQ(s,B.eP,s,B.dr,B.Vs),s,B.BT,s)}}
 A.re.prototype={
 L(a){var s=null
-return A.td(A.vQ(s,B.du,s,B.dr,B.Vo),s,new A.cu(B.fV,A.lc(A.d([B.Vy,B.lc,A.rs(B.Gn,new A.a1E(),B.W3,B.Vp),A.rs(B.G7,new A.a1F(),B.VC,B.Vw),B.Q1,B.BU],t.D),B.bi,B.aO,B.aX),s),s)}}
+return A.td(A.vQ(s,B.du,s,B.dr,B.Vo),s,new A.cu(B.fV,A.lc(A.d([B.Vy,B.lc,A.rs(B.Gn,new A.a1E(),B.VC,B.Vp),A.rs(B.G7,new A.a1F(),B.VP,B.Vw),B.Q1,B.BU],t.D),B.bi,B.aO,B.aX),s),s)}}
 A.a1E.prototype={
 $0(){},
 $S:0}
@@ -81989,7 +81989,7 @@ r=s.c
 r.toString
 A.fn(r).o4(null)}else p.af(q).f.oy(B.PU)},
 L(a){var s=null
-return A.td(A.vQ(s,B.bc,s,B.dr,B.VP),B.iV,A.hN(A.awM(A.lc(A.d([B.Go,B.c0,B.Vi,B.ld,A.MN(this.d,A.xY(s,new A.eB(4,A.eR(12),B.e4),s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,"New Username",!0,!0,!1,s,B.Gl,s,s,s,s,s,s,s,s,s,s,s,s),!1,s),B.c0,A.MN(this.e,A.xY(s,new A.eB(4,A.eR(12),B.e4),s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,"Create Password",!0,!0,!1,s,B.Ge,s,s,s,s,s,s,s,s,s,s,s,s),!0,s),B.yO,A.eF(A.auC(B.Vg,this.gaoD(),A.If(s,s,B.bc,s,s,s,s,s,s,s,s,s,s,s,new A.cn(A.eR(12),B.o),s,s,s,s,s)),50,1/0)],t.D),B.au,B.dt,B.aX),B.fV),s,s),s)}}
+return A.td(A.vQ(s,B.bc,s,B.dr,B.VQ),B.iV,A.hN(A.awM(A.lc(A.d([B.Go,B.c0,B.Vi,B.ld,A.MN(this.d,A.xY(s,new A.eB(4,A.eR(12),B.e4),s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,"New Username",!0,!0,!1,s,B.Gl,s,s,s,s,s,s,s,s,s,s,s,s),!1,s),B.c0,A.MN(this.e,A.xY(s,new A.eB(4,A.eR(12),B.e4),s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,"Create Password",!0,!0,!1,s,B.Ge,s,s,s,s,s,s,s,s,s,s,s,s),!0,s),B.yO,A.eF(A.auC(B.Vg,this.gaoD(),A.If(s,s,B.bc,s,s,s,s,s,s,s,s,s,s,s,new A.cn(A.eR(12),B.o),s,s,s,s,s)),50,1/0)],t.D),B.au,B.dt,B.aX),B.fV),s,s),s)}}
 A.x4.prototype={
 b7(a){var s,r,q=this.x,p=q.h(0,a)
 if(p!=null)return p
@@ -86823,8 +86823,8 @@ B.RM=new A.j(!0,B.dw,null,null,null,null,18,null,null,null,null,null,null,null,n
 B.Vr=new A.b4("No past sessions found.",null,B.RM,null,null,null,null,null,null)
 B.ao=new A.fj(700)
 B.SQ=new A.j(!0,B.eP,null,null,null,null,null,B.ao,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.VS=new A.b4("Start borrowing to build your history!",null,B.SQ,null,null,null,null,null,null)
-B.IU=s([B.G9,B.lc,B.Vr,B.VS],t.D)
+B.VT=new A.b4("Start borrowing to build your history!",null,B.SQ,null,null,null,null,null,null)
+B.IU=s([B.G9,B.lc,B.Vr,B.VT],t.D)
 B.E0=new A.nq(B.ac,B.dt,B.aX,B.au,null,B.co,null,0,B.IU,null)
 B.BT=new A.iA(B.a3,null,null,B.E0,null)
 B.zn=new A.j(!0,B.dw,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
@@ -86937,7 +86937,7 @@ B.VA=new A.b4("Developed & Designed by",null,B.zg,null,null,null,null,null,null)
 B.f6=new A.es(null,8,null,null)
 B.k5=new A.fj(900)
 B.Tw=new A.j(!0,B.b4,null,null,null,null,32,B.k5,null,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.W_=new A.b4("MEGHANA YELURI",null,B.Tw,null,null,null,null,null,null)
+B.W0=new A.b4("MEGHANA YELURI",null,B.Tw,null,null,null,null,null,null)
 B.Cv=new A.n(1,0.8784313725490196,0.9490196078431372,0.9450980392156862,B.e)
 B.Cy=new A.n(1,0.6980392156862745,0.8745098039215686,0.8588235294117647,B.e)
 B.CK=new A.n(1,0.5019607843137255,0.796078431372549,0.7686274509803922,B.e)
@@ -86952,7 +86952,7 @@ B.KT=new A.ck([50,B.Cv,100,B.Cy,200,B.CK,300,B.Cm,400,B.Cz,500,B.Cl,600,B.CD,700
 B.dv=new A.hX(B.KT,1,0,0.5882352941176471,0.5333333333333333,B.e)
 B.Sf=new A.j(!0,B.dv,null,null,null,null,14,B.ao,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.Vj=new A.b4("Full-Stack Developer | Innovator",null,B.Sf,null,null,null,null,null,null)
-B.Hl=s([B.VA,B.f6,B.W_,B.f6,B.Vj],t.D)
+B.Hl=s([B.VA,B.f6,B.W0,B.f6,B.Vj],t.D)
 B.E1=new A.nq(B.ac,B.aO,B.aX,B.au,null,B.co,null,0,B.Hl,null)
 B.fH=new A.hf(0,"cut")
 B.fI=new A.hf(1,"copy")
@@ -87482,14 +87482,14 @@ B.H0=new A.oc(B.BX,B.Vu,B.VG,null,null)
 B.mY=new A.I4(null)
 B.W4=new A.b4("2",null,B.cm,null,null,null,null,null,null)
 B.BZ=new A.qA(B.W4,null)
-B.VW=new A.b4("Borrow Resource",null,B.cV,null,null,null,null,null,null)
+B.VX=new A.b4("Borrow Resource",null,B.cV,null,null,null,null,null,null)
 B.VL=new A.b4("Click on Borrow to allocate a secure token to your account.",null,null,null,null,null,null,null,null)
-B.H1=new A.oc(B.BZ,B.VW,B.VL,null,null)
-B.W0=new A.b4("3",null,B.cm,null,null,null,null,null,null)
-B.BY=new A.qA(B.W0,null)
-B.VV=new A.b4("1-Hour Lock System",null,B.cV,null,null,null,null,null,null)
-B.VZ=new A.b4("Read the content. Other books will be locked until you return the current one.",null,null,null,null,null,null,null,null)
-B.H_=new A.oc(B.BY,B.VV,B.VZ,null,null)
+B.H1=new A.oc(B.BZ,B.VX,B.VL,null,null)
+B.W1=new A.b4("3",null,B.cm,null,null,null,null,null,null)
+B.BY=new A.qA(B.W1,null)
+B.VW=new A.b4("1-Hour Lock System",null,B.cV,null,null,null,null,null,null)
+B.W_=new A.b4("Read the content. Other books will be locked until you return the current one.",null,null,null,null,null,null,null,null)
+B.H_=new A.oc(B.BY,B.VW,B.W_,null,null)
 B.HX=s([B.H0,B.mY,B.H1,B.mY,B.H_],t.D)
 B.aA=new A.ee(0,"icon")
 B.aT=new A.ee(1,"input")
@@ -88918,12 +88918,12 @@ B.CB=new A.n(1,0.10588235294117647,0.3686274509803922,0.12549019607843137,B.e)
 B.KY=new A.ck([50,B.DO,100,B.CI,200,B.DF,300,B.DY,400,B.Dh,500,B.DQ,600,B.DX,700,B.Cb,800,B.D2,900,B.CB],t.pl)
 B.L2=new A.hX(B.KY,1,0.2980392156862745,0.6862745098039216,0.3137254901960784,B.e)
 B.PW=new A.hv(B.Vx,B.L2,null,null,null,null,null,null,B.i0,null,null,null,null,B.di,!1,null,null,null,B.M,null)
-B.VU=new A.b4("Please enter Username and Password!",null,null,null,null,null,null,null,null)
-B.PX=new A.hv(B.VU,B.u1,null,null,null,null,null,null,null,null,null,null,null,B.di,!1,null,null,null,B.M,null)
+B.VV=new A.b4("Please enter Username and Password!",null,null,null,null,null,null,null,null)
+B.PX=new A.hv(B.VV,B.u1,null,null,null,null,null,null,null,null,null,null,null,B.di,!1,null,null,null,B.M,null)
 B.VH=new A.b4("Could not open material",null,null,null,null,null,null,null,null)
 B.PY=new A.hv(B.VH,null,null,null,null,null,null,null,null,null,null,null,null,B.di,!1,null,null,null,B.M,null)
-B.W1=new A.b4("Error connecting to server",null,null,null,null,null,null,null,null)
-B.PZ=new A.hv(B.W1,null,null,null,null,null,null,null,null,null,null,null,null,B.di,!1,null,null,null,B.M,null)
+B.W2=new A.b4("Error connecting to server",null,null,null,null,null,null,null,null)
+B.PZ=new A.hv(B.W2,null,null,null,null,null,null,null,null,null,null,null,null,B.di,!1,null,null,null,B.M,null)
 B.yR=new A.AB(0,"permissive")
 B.Q_=new A.AB(1,"normal")
 B.Q0=new A.AB(2,"forced")
@@ -89309,7 +89309,7 @@ B.Vw=new A.b4("Technical Hotline",null,null,null,null,null,null,null,null)
 B.Tb=new A.j(!0,null,null,null,null,null,24,B.ao,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.Vy=new A.b4("Need Assistance?",null,B.Tb,null,null,null,null,null,null)
 B.Vz=new A.b4("Version 2.0 (Flutter Hybrid)",null,B.zg,null,null,null,null,null,null)
-B.VC=new A.b4("+91 9876543210",null,null,null,null,null,null,null,null)
+B.VC=new A.b4("meghanayeluri0306@gmail.com",null,null,null,null,null,null,null,null)
 B.zf=new A.j(!0,B.kt,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.VD=new A.b4("Exit Session",null,B.zf,null,null,null,null,null,null)
 B.VE=new A.b4("Login",null,B.zo,null,null,null,null,null,null)
@@ -89318,18 +89318,18 @@ B.VF=new A.b4("\ud83d\udd12 Material Access Unlocked!",null,B.QX,null,null,null,
 B.VI=new A.b4("Book Catalog",null,B.cV,null,null,null,null,null,null)
 B.VJ=new A.b4("Return Copy Now",null,B.zf,null,null,null,null,null,null)
 B.VO=new A.b4("About Us",null,null,null,null,null,null,null,null)
-B.VP=new A.b4("Create an Account",null,B.cm,null,null,null,null,null,null)
-B.VQ=new A.b4("How It Works",null,B.cm,null,null,null,null,null,null)
+B.VP=new A.b4("+91 8919873965",null,null,null,null,null,null,null,null)
+B.VQ=new A.b4("Create an Account",null,B.cm,null,null,null,null,null,null)
+B.VR=new A.b4("How It Works",null,B.cm,null,null,null,null,null,null)
 B.zi=new A.j(!0,B.k,null,null,null,null,16,B.ao,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.VR=new A.b4("Borrow Book Copy",null,B.zi,null,null,null,null,null,null)
-B.VT=new A.b4("Help Desk & Contact",null,null,null,null,null,null,null,null)
-B.VX=new A.b4("Read Online Content",null,B.zi,null,null,null,null,null,null)
+B.VS=new A.b4("Borrow Book Copy",null,B.zi,null,null,null,null,null,null)
+B.VU=new A.b4("Help Desk & Contact",null,null,null,null,null,null,null,null)
+B.VY=new A.b4("Read Online Content",null,B.zi,null,null,null,null,null,null)
 B.Cd=new A.n(1,0.3333333333333333,0.3333333333333333,0.3333333333333333,B.e)
 B.Fy=new A.ID(1,"italic")
 B.Tz=new A.j(!0,B.Cd,null,null,null,null,null,null,B.Fy,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.VY=new A.b4('"The beautiful thing about learning is that no one can take it away from you."\n\u2014 B.B. King (Curated for Lumina Students)',null,B.Tz,null,null,null,null,null,null)
-B.W2=new A.b4("Locked",null,B.zn,null,null,null,null,null,null)
-B.W3=new A.b4("support@luminalibrary.edu",null,null,null,null,null,null,null,null)
+B.VZ=new A.b4('"The beautiful thing about learning is that no one can take it away from you."\n\u2014 B.B. King (Curated for Lumina Students)',null,B.Tz,null,null,null,null,null,null)
+B.W3=new A.b4("Locked",null,B.zn,null,null,null,null,null,null)
 B.Zs=new A.adA(0,"system")
 B.LT=new A.h(0.056,0.024)
 B.M6=new A.h(0.108,0.3085)
