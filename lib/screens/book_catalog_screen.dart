@@ -5,7 +5,10 @@ import 'dart:async';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'login_screen.dart';
-
+import '../main.dart';
+import 'history_screen.dart';
+// ignore: avoid_web_libraries_in_flutter, deprecated_member_use
+import 'dart:html' as html;
 class BookCatalogScreen extends StatefulWidget {
   const BookCatalogScreen({super.key});
 
@@ -23,7 +26,7 @@ class _BookCatalogScreenState extends State<BookCatalogScreen> {
   TextEditingController searchController = TextEditingController();
   bool isLoading = true;
 
-  String currentUser = 'meghana';
+  String currentUser = html.window.localStorage['username'] ?? 'Student';
   String? activeBookId;
   Timer? _returnTimer;
   int _secondsRemaining = 0;
@@ -181,6 +184,18 @@ class _BookCatalogScreenState extends State<BookCatalogScreen> {
   }
 
   Future<void> _openMaterialUrl(String bookTitle) async {
+    try {
+      String historyKey = 'history_$currentUser';
+      List<String> history = [];
+      if (html.window.localStorage.containsKey(historyKey)) {
+        history = List<String>.from(json.decode(html.window.localStorage[historyKey]!));
+      }
+      history.remove(bookTitle); 
+      history.insert(0, bookTitle); 
+      html.window.localStorage[historyKey] = json.encode(history);
+    } catch (e) {
+      debugPrint('History save error: $e');
+    }
     String link = 'https://en.wikipedia.org/wiki/Computer_science'; 
 
     if (bookTitle.contains('Natural Language')) {
@@ -210,12 +225,12 @@ class _BookCatalogScreenState extends State<BookCatalogScreen> {
 
   Drawer _buildAppDrawer() {
     return Drawer(
-      backgroundColor: const Color(0xFFF0EFFF),
+      //backgroundColor: const Color(0xFFF0EFFF),
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
           const DrawerHeader(
-            decoration: BoxDecoration(color: Color(0xFFF0EFFF)),
+            decoration: const BoxDecoration(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -263,6 +278,24 @@ class _BookCatalogScreenState extends State<BookCatalogScreen> {
               Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutScreen()));
             },
           ),
+          const Divider(), // ఒక చిన్న గీత
+          ListTile(
+            leading: const Icon(Icons.dark_mode, color: Colors.indigo),
+            title: const Text('Dark Theme', style: TextStyle(fontWeight: FontWeight.bold)),
+            trailing: ValueListenableBuilder<ThemeMode>(
+              valueListenable: themeNotifier,
+              builder: (context, currentMode, child) {
+                return Switch(
+                  value: currentMode == ThemeMode.dark,
+                  activeColor: const Color(0xFF5A4FCF),
+                  onChanged: (value) {
+                    // యూజర్ స్విచ్ నొక్కగానే థీమ్ మారుతుంది
+                    themeNotifier.value = value ? ThemeMode.dark : ThemeMode.light;
+                  },
+                );
+              },
+            ),
+          ),
           const SizedBox(height: 100),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -275,7 +308,7 @@ class _BookCatalogScreenState extends State<BookCatalogScreen> {
               onPressed: () {
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
               },
-              child: const Text('Exit Session', style: TextStyle(color: Colors.redAccent)),
+              child: const Text('Logout', style: TextStyle(color: Colors.redAccent)),
             ),
           )
         ],
@@ -286,24 +319,25 @@ class _BookCatalogScreenState extends State<BookCatalogScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF8F9FA),
+      //backgroundColor: const Color(0xFFF8F9FA),
       appBar: AppBar(
-        iconTheme: const IconThemeData(color: Color(0xFF5A4FCF)),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
+        backgroundColor: const Color(0xFF5A4FCF),
+        title: const Text('Lumina Catalog', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+        
+        
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: const Icon(Icons.menu, color: Colors.white, size: 28), // 100% పక్కా White!
+            onPressed: () => Scaffold.of(context).openDrawer(),
+            tooltip: 'Open Menu',
+          ),
+        ),
+
         actions: [
-          Container(
-            margin: const EdgeInsets.only(right: 16, top: 10, bottom: 10),
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-            decoration: BoxDecoration(color: const Color(0xFFE8E5FF), borderRadius: BorderRadius.circular(20)),
-            child: Row(
-              children: [
-                const Icon(Icons.person, color: Color(0xFF5A4FCF), size: 16),
-                const SizedBox(width: 8),
-                Text('Reader: $currentUser', style: const TextStyle(color: Color(0xFF5A4FCF), fontWeight: FontWeight.bold)),
-              ],
-            ),
-          )
+          IconButton(
+            icon: const Icon(Icons.analytics_outlined, color: Colors.white),
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const HistoryScreen())),
+          ),
         ],
       ),
       drawer: _buildAppDrawer(),
@@ -314,7 +348,7 @@ class _BookCatalogScreenState extends State<BookCatalogScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('Explore\nResources', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Color(0xFF333333))),
+                  const Text('Explore\nResources', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 16),
                   Container(
                     padding: const EdgeInsets.all(16),
@@ -350,14 +384,11 @@ class _BookCatalogScreenState extends State<BookCatalogScreen> {
                         final String bookId = book['id']?.toString() ?? '';
                         final String bookTitle = book['title']?.toString() ?? 'Unknown Title';
                         final String bookSubject = book['subject']?.toString() ?? 'Subject';
-                        final String availableTokens = book['availableTokens']?.toString() ?? '0';
-                        final String totalTokens = book['totalTokens']?.toString() ?? '0';
-
                         final bool isMyBook = activeBookId == bookId;
                         final bool isLocked = activeBookId != null && !isMyBook;
 
                         return Card(
-                          color: Colors.white,
+                        
                           elevation: 2,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                           margin: const EdgeInsets.only(bottom: 16),
@@ -366,15 +397,15 @@ class _BookCatalogScreenState extends State<BookCatalogScreen> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                   decoration: BoxDecoration(color: const Color(0xFFF0EFFF), borderRadius: BorderRadius.circular(4)),
                                   child: Text(bookSubject, style: const TextStyle(fontSize: 10, color: Color(0xFF5A4FCF), fontWeight: FontWeight.bold)),
                                 ),
                                 const SizedBox(height: 12),
-                                Text(bookTitle, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black87)),
+                                Text(bookTitle, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                                 const SizedBox(height: 12),
-                                Text('Available Copies: $availableTokens / $totalTokens', style: const TextStyle(fontSize: 12, color: Colors.grey)),
                                 const SizedBox(height: 8),
                                 Container(height: 4, width: 100, color: const Color(0xFF5A4FCF)),
                                 const SizedBox(height: 16),
@@ -462,7 +493,10 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('About Us', style: TextStyle(color: Colors.white)), backgroundColor: const Color(0xFF5A4FCF), iconTheme: const IconThemeData(color: Colors.white)),
+      appBar: AppBar(
+        title: const Text('About Us'), 
+        backgroundColor: const Color(0xFF5A4FCF),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -512,7 +546,6 @@ class HowItWorksScreen extends StatelessWidget {
           ListTile(
             leading: CircleAvatar(backgroundColor: Colors.teal, child: Text('2', style: TextStyle(color: Colors.white))),
             title: Text('Borrow Resource', style: TextStyle(fontWeight: FontWeight.bold)),
-            subtitle: Text('Click on Borrow to allocate a secure token to your account.'),
           ),
           Divider(),
           ListTile(
@@ -526,27 +559,7 @@ class HowItWorksScreen extends StatelessWidget {
   }
 }
 
-class HistoryScreen extends StatelessWidget {
-  const HistoryScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Session History', style: TextStyle(color: Colors.white)), backgroundColor: Colors.orange, iconTheme: const IconThemeData(color: Colors.white)),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.history_toggle_off, size: 80, color: Colors.orange),
-            SizedBox(height: 20),
-            Text('No past sessions found.', style: TextStyle(fontSize: 18, color: Colors.grey)),
-            Text('Start borrowing to build your history!', style: TextStyle(color: Colors.orange, fontWeight: FontWeight.bold)),
-          ],
-        ),
-      ),
-    );
-  }
-}
 
 class HelpDeskScreen extends StatelessWidget {
   const HelpDeskScreen({super.key});
@@ -566,12 +579,6 @@ class HelpDeskScreen extends StatelessWidget {
               leading: const Icon(Icons.email, color: Colors.blue),
               title: const Text('Email Support'),
               subtitle: const Text('meghanayeluri0306@gmail.com'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: const Icon(Icons.phone, color: Colors.blue),
-              title: const Text('Technical Hotline'),
-              subtitle: const Text('+91 8919873965'),
               onTap: () {},
             ),
             const Spacer(),
