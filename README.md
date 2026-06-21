@@ -1,17 +1,18 @@
-# lumina_library_flutter
+# 📚 Lumina Library - Full Stack Web Application
 
-A new Flutter project.
+A professional hybrid online library catalog and book management system.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Live Demo & Quick Links
 
-A few resources to get you started if this is your first Flutter project:
+* 🌐 **Live Web App (Frontend):** [Click Here to Open Lumina App](https://lumina-library-app.vercel.app)
+* ⚙️ **Backend Repository (Node.js/Express):** [Click Here for Backend Code](https://github.com/meghanayeluri0306/lumina-library)
+* 🔗 **Backend API Live URL:** `https://lumina-library-ecas.onrender.com`
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 🛠️ Technology Stack
+* **Frontend:** Flutter Web, Dart, Material UI
+* **Backend:** Node.js, Express.js, REST API
+* **Deployment:** Vercel (Frontend) & Render.com (Backend)****
